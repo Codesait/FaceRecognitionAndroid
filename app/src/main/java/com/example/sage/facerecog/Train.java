@@ -66,6 +66,12 @@ public class Train extends AppCompatActivity implements CameraBridgeViewBase.CvC
     private String[] uniqueLabels;
     FaceRecognizer recognize;
 
+
+//    static{
+//        System.loadLibrary(Core.NATIVE_LIBRARY_NAME); // load opencv_java
+//    }
+
+
     private BaseLoaderCallback callbackLoader = new BaseLoaderCallback(this) {
         @Override
         public void onManagerConnected(int status) {
@@ -231,6 +237,7 @@ public class Train extends AppCompatActivity implements CameraBridgeViewBase.CvC
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+//        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_train);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -243,6 +250,7 @@ public class Train extends AppCompatActivity implements CameraBridgeViewBase.CvC
         }
         else {
             requestPerms();
+
         }
 
         openCVCamera = (CameraBridgeViewBase)findViewById(R.id.java_camera_view);
@@ -255,6 +263,7 @@ public class Train extends AppCompatActivity implements CameraBridgeViewBase.CvC
             @Override
             public void onClick(View view) {
                 if(gray.total() == 0)
+                    Log.v("front", "display");
                     Toast.makeText(getApplicationContext(), "Can't Detect Faces", Toast.LENGTH_SHORT).show();
                 classifier.detectMultiScale(gray,faces,1.1,3,0|CASCADE_SCALE_IMAGE, new Size(30,30));
                 if(!faces.empty()) {

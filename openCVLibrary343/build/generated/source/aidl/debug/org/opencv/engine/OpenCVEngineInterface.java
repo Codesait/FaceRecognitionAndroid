@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: /home/sage/AndroidStudioProjects/FaceRecog/openCVLibrary343/src/main/aidl/org/opencv/engine/OpenCVEngineInterface.aidl
+ * Original file: /home/sage/AndroidStudioProjects/FaceRecognitionAndroid/openCVLibrary343/src/main/aidl/org/opencv/engine/OpenCVEngineInterface.aidl
  */
 package org.opencv.engine;
 /**

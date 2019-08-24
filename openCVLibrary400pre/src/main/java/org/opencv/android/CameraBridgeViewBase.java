@@ -29,7 +29,8 @@ import android.view.WindowManager;
 /**
  * This is a basic class, implementing the interaction with Camera and OpenCV library.
  * The main responsibility of it - is to control when camera can be enabled, process the frame,
- * call external listener to make any adjustments to the frame and then draw the resulting
+ * call external listener to make any adjustments to the frame a
+ * nd then draw the resulting
  * frame to the screen.
  * The clients shall implement CvCameraViewListener.
  */
