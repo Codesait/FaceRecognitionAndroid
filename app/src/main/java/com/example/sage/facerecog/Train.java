@@ -71,6 +71,7 @@ public class Train extends AppCompatActivity implements CameraBridgeViewBase.CvC
 //        System.loadLibrary(Core.NATIVE_LIBRARY_NAME); // load opencv_java
 //    }
 
+//    nullpointer exception
 
     private BaseLoaderCallback callbackLoader = new BaseLoaderCallback(this) {
         @Override
